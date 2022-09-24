@@ -1,5 +1,16 @@
 function Cart() {
   this.pizzas = {};
+  this.currentId = 0;
+}
+
+Cart.prototype.addCart = function(eachPie) {
+  eachPie.id = this.assignId();
+  this.pizzas[eachPie.id] = eachPie;
+}
+
+Cart.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
 }
 
 let shoppingCart = new Cart;
@@ -18,6 +29,7 @@ function Pizza() {
 }
 
 let myPizza = new Pizza;
+let myOtherPizza = new Pizza;
 
 Pizza.prototype.order = function(xtraCheese, xtraLarge, pepperoni, sausage, anchovi, canadianBacon, pineapple, bellPepper, redOnion,pepperoncinni) {
   this.xtraCheese = xtraCheese
@@ -34,6 +46,3 @@ Pizza.prototype.order = function(xtraCheese, xtraLarge, pepperoni, sausage, anch
 
 myPizza.order(true, true, true, true, true, true, true, true, true, true)
 
-Cart.prototype.addCart = function(eachPie) {
-  this.pizzas = eachPie;
-}
