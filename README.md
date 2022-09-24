@@ -34,10 +34,10 @@ Code: function Pizza() {
 ```
 Expected Output: Pizza {xtraCheese: false, xtraLarge: false, pepperoni: false, sausage: false, anchovi: false, …}
 
-**Describe Pizza.prototype.addCart**
+**Describe Pizza.prototype.Order**
 Test 1: It should set xtraCheese to true.
 ```javascript
-Code: Pizza.prototype.addCart = function() {
+Code: Pizza.prototype.order = function() {
    this.xtraCheese = true
 }
 ```
@@ -45,7 +45,7 @@ Expected output: Pizza {xtraCheese: true, xtraLarge: false, pepperoni: false, s
 
 Test 2: It should set xtraCheese to true based on an input.
 ```javascript
-Code: Pizza.prototype.addCart = function(xtraCheese) {
+Code: Pizza.prototype.order = function(xtraCheese) {
   this.xtraCheese = xtraCheese
 }
 ```
@@ -53,7 +53,7 @@ Expected output: Pizza {xtraCheese: true, xtraLarge: false, pepperoni: false, s
 
 Test 3: It should be written to accept inputs for all properties.
 ```javascript
-Code: Pizza.prototype.addCart = function(xtraCheese, xtraLarge, pepperoni, sausage, anchovi, canadianBacon, pineapple, bellPepper, pepperoncinni, redOnion) {
+Code: Pizza.prototype.order = function(xtraCheese, xtraLarge, pepperoni, sausage, anchovi, canadianBacon, pineapple, bellPepper, pepperoncinni, redOnion) {
   this.xtraCheese = xtraCheese
   this.xtraLarge = xtraLarge
   this.pepperoni = pepperoni

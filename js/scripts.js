@@ -17,7 +17,7 @@ function Pizza() {
 
 let myPizza = new Pizza;
 
-Pizza.prototype.addCart = function(xtraCheese, xtraLarge, pepperoni, sausage, anchovi, canadianBacon, pineapple, bellPepper, redOnion,pepperoncinni) {
+Pizza.prototype.order = function(xtraCheese, xtraLarge, pepperoni, sausage, anchovi, canadianBacon, pineapple, bellPepper, redOnion,pepperoncinni) {
   this.xtraCheese = xtraCheese
   this.xtraLarge = xtraLarge
   this.pepperoni = pepperoni
@@ -30,4 +30,4 @@ Pizza.prototype.addCart = function(xtraCheese, xtraLarge, pepperoni, sausage, an
   this.pepperoncinni = pepperoncinni
 }
 
-myPizza.addCart(true, true, true, true, true, true, true, true, true, true)
+myPizza.order(true, true, true, true, true, true, true, true, true, true)
