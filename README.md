@@ -1,4 +1,5 @@
 **Decscribe Cart()**
+
 Test 1: It should create an empty "Cart" object.
 ```javascript
 Code: function Cart() {
@@ -8,6 +9,7 @@ Code: function Cart() {
 Expected output: Cart {pizzas: {…}}
 
 **Describe Pizza()**
+
 Test 1: It should create a pizza object with the properties pepperoni and xtra cheese with boolean values set to 'false'.
 ```javascript
 Code: function Pizza() {
@@ -35,6 +37,7 @@ Code: function Pizza() {
 Expected Output: Pizza {xtraCheese: false, xtraLarge: false, pepperoni: false, sausage: false, anchovi: false, …}
 
 **Describe Pizza.prototype.Order**
+
 Test 1: It should set xtraCheese to true.
 ```javascript
 Code: Pizza.prototype.order = function() {
@@ -54,16 +57,24 @@ Expected output: Pizza {xtraCheese: true, xtraLarge: false, pepperoni: false, s
 Test 3: It should be written to accept inputs for all properties.
 ```javascript
 Code: Pizza.prototype.order = function(xtraCheese, xtraLarge, pepperoni, sausage, anchovi, canadianBacon, pineapple, bellPepper, pepperoncinni, redOnion) {
-  this.xtraCheese = xtraCheese
-  this.xtraLarge = xtraLarge
-  this.pepperoni = pepperoni
-  this.sausage = sausage
-  this.anchovi = anchovi
-  this.canadianBacon = canadianBacon
-  this.pineapple = pineapple
-  this.bellPepper = bellPepper
-  this.pepperoncinni = pepperoncinni
-  this.redOnion = redOnion
+  this.xtraCheese = xtraCheese;
+  this.xtraLarge = xtraLarge;
+  this.pepperoni = pepperoni;
+  this.sausage = sausage;
+  this.anchovi = anchovi;
+  this.canadianBacon = canadianBacon;
+  this.pineapple = pineapple;
+  this.bellPepper = bellPepper;
+  this.pepperoncinni = pepperoncinni;
+  this.redOnion = redOnion;
 }
 ```
 Expected output = Pizza {xtraCheese: true, xtraLarge: false, pepperoni: true, sausage: true, anchovi: true, …}
+
+**Describe: Cart.prototype.addCart**
+
+Test 1: "It should add a finished pizza object to the cart object."
+```javascript
+Code: Cart.prototype.addCart = function(eachPie) {
+  this.pizzas = eachPie;
+}

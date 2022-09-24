@@ -2,6 +2,8 @@ function Cart() {
   this.pizzas = {};
 }
 
+let shoppingCart = new Cart;
+
 function Pizza() {
   this.xtraCheese = false
   this.xtraLarge = false
@@ -31,3 +33,7 @@ Pizza.prototype.order = function(xtraCheese, xtraLarge, pepperoni, sausage, anch
 }
 
 myPizza.order(true, true, true, true, true, true, true, true, true, true)
+
+Cart.prototype.addCart = function(eachPie) {
+  this.pizzas = eachPie;
+}
