@@ -14,3 +14,7 @@ function Pizza() {
   this.pepperoncinni = false
   this.redOnion = false
 }
+
+Pizza.prototype.order = function(xtraCheese) {
+  this.xtraCheese = xtraCheese
+}
