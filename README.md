@@ -34,4 +34,9 @@ Code: function Pizza() {
 ```
 Expected Output: Pizza {xtraCheese: false, xtraLarge: false, pepperoni: false, sausage: false, anchovi: false, …}
 
-**Describe 
+**Describe Pizza.prototype.Order**
+Test 1: It should create a new pizza object and add a pizza name property.
+```javascript
+Code: Pizza.prototype.order = function() {
+  
+}
