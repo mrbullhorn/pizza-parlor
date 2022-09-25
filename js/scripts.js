@@ -1,3 +1,4 @@
+//Unmet Stretch Goal------
 function Cart() {
   this.pizzas = {};
   this.currentId = 0;
@@ -12,9 +13,7 @@ Cart.prototype.assignId = function() {
   this.currentId += 1;
   return this.currentId;
 }
-
-let shoppingCart = new Cart;
-
+//-------------------------
 function Pizza() {
   this.xtraCheese = false
   this.xtraLarge = false
@@ -27,9 +26,6 @@ function Pizza() {
   this.pepperoncinni = false
   this.redOnion = false
 }
-
-let myPizza = new Pizza;
-let myOtherPizza = new Pizza;
 
 Pizza.prototype.order = function(xtraCheese, xtraLarge, pepperoni, sausage, anchovi, canadianBacon, pineapple, bellPepper, redOnion,pepperoncinni) {
   this.xtraCheese = xtraCheese
@@ -44,11 +40,8 @@ Pizza.prototype.order = function(xtraCheese, xtraLarge, pepperoni, sausage, anch
   this.pepperoncinni = pepperoncinni
 }
 
-myPizza.order(true, true, true, true, true, true, true, true, true, true)
-myOtherPizza.order(false, false, false, false, false, false, false, false, false, false)
-
 Pizza.prototype.addUp = function () {
-  let total = 20
+  total = 20
   if (this.xtraCheese === true) {
     total += 0.5
   } if (this.xtraLarge === true) {
@@ -70,9 +63,7 @@ Pizza.prototype.addUp = function () {
   } if (this.pepperoncinni === true) {
     total += 0.5
   }
-  return total;
 }
-
 
 //UI Logic
 
@@ -81,7 +72,20 @@ window.addEventListener("load", function() {
   form.addEventListener("submit", function(e) {
     e.preventDefault();
     let myPizza = new Pizza;
-    console.log(myPizza);
-
-  })
+    let xtraLarge = document.getElementById("xtraLarge").checked 
+    let xtraCheese = document.getElementById("xtraCheese").checked 
+    let pepperoni = document.getElementById("pepperoni").checked
+    let sausage = document.getElementById("sausage").checked 
+    let anchovi = document.getElementById("anchovi").checked
+    let canadianBacon = document.getElementById("canadianBacon").checked 
+    let pineapple = document.getElementById("pineapple").checked
+    let bellPepper = document.getElementById("bellPepper").checked
+    let pepperoncinni = document.getElementById("pepperoncinni").checked
+    let redOnion = document.getElementById("redOnion").checked
+    myPizza.order(xtraLarge, xtraCheese, pepperoni, pepperoni, sausage, anchovi, canadianBacon, pineapple, bellPepper, pepperoncinni, redOnion);
+    myPizza.addUp();
+    console.log(total); 
+    printText = "$" + total
+    document.querySelector("span#output").innerText = printText;  
+  });
 })
