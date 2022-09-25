@@ -107,3 +107,46 @@ Expected output: Cart {pizzas: {…}}
 
 Test 2: "it should add a pizza object with a unique key."
 ```javascript
+Code: Cart.prototype.addCart = function(eachPie) {
+  eachPie.id = this.assignId();
+  this.pizzas[eachPie.id] = eachPie;
+}
+```
+Expected output: Cart {pizzas: {…}, currentId: 2}
+currentId: 2
+pizzas: 
+1: Pizza {xtraCheese: true, xtraLarge: true, pepperoni: true, sausage: true, anchovi: true, …}
+2: Pizza {xtraCheese: false, xtraLarge: false, pepperoni: false, sausage: false, anchovi: false, …} 
+
+**Describe: Pizza.prototype.total()**
+
+Test 1: It should evaluate the total cost of a pizza based on toppings selected.
+```javascript
+Code: Pizza.prototype.addUp = function () {
+  let total = 20
+  if (this.xtraCheese === true) {
+    total += 0.5
+  } if (this.xtraLarge === true) {
+    total += 10
+  } if (this.pepperoni === true) {
+    total += 0.5
+  } if (this.sausage === true) {
+    total += 0.5
+  } if (this.anchovi === true) {
+    total += 0.5
+  } if (this.canadianBacon === true) {
+    total += 0.5
+  } if (this.pineapple === true) {
+    total += 0.5
+  } if (this.bellPepper === true) {
+    total += 0.5
+  } if (this.redOnion === true) {
+    total += 0.5
+  } if (this.pepperoncinni === true) {
+    total += 0.5
+  }
+  return total;
+}
+
+
+}

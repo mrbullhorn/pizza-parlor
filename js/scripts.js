@@ -45,4 +45,43 @@ Pizza.prototype.order = function(xtraCheese, xtraLarge, pepperoni, sausage, anch
 }
 
 myPizza.order(true, true, true, true, true, true, true, true, true, true)
+myOtherPizza.order(false, false, false, false, false, false, false, false, false, false)
 
+Pizza.prototype.addUp = function () {
+  let total = 20
+  if (this.xtraCheese === true) {
+    total += 0.5
+  } if (this.xtraLarge === true) {
+    total += 10
+  } if (this.pepperoni === true) {
+    total += 0.5
+  } if (this.sausage === true) {
+    total += 0.5
+  } if (this.anchovi === true) {
+    total += 0.5
+  } if (this.canadianBacon === true) {
+    total += 0.5
+  } if (this.pineapple === true) {
+    total += 0.5
+  } if (this.bellPepper === true) {
+    total += 0.5
+  } if (this.redOnion === true) {
+    total += 0.5
+  } if (this.pepperoncinni === true) {
+    total += 0.5
+  }
+  return total;
+}
+
+
+//UI Logic
+
+window.addEventListener("load", function() {
+  const form = document.querySelector("form");
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    let myPizza = new Pizza;
+    console.log(myPizza);
+
+  })
+})

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>Pizza Parlor</title>
+</head>
+<body>
+  <div class="large-container">
+    <div class="title">
+      <span class="main-title"><h1>Hans' Pizza Authentico</h1></span>
+      <span class="subtitle"><h2>We make Pizza</h2></span>
+    </div>
+    <span class="order-here"><h2>Choose your size and toppings.</h2>
+    <form id="toppings-size">
+      
+      <input type="checkbox" id="xtraLarge" name="topping" value="false">
+      <label for="xtraLarge">Xtra Large</label>
+
+    <input type="checkbox" id="xtraCheese" name="topping" value="false">
+      <label for="xtraCheese">Xtra Cheese</label>
+
+    <input type="checkbox" id="pepperoni" name="topping" value="false">
+      <label for="pepperoni">Pepperoni</label>
+
+    <input type="checkbox" id="sausage" name="topping" value="false">
+      <label for="sausage">Sausage</label>
+
+    <input type="checkbox" id="anchovi" name="topping" value="false">
+      <label for="anchovi">Anchovi</label>
+
+    <input type="checkbox" id="canadianBacon" name="topping" value="false">
+      <label for="canadianBacon">Canadian Bacon</label>
+      
+      <input type="checkbox" id="pineapple" name="topping" value="false">
+      <label for="pineapple">Pineapple</label>
+
+    <input type="checkbox" id="bellPepper" name="topping" value="false">
+      <label for="bellPepper">Bell Pepper</label>
+
+    <input type="checkbox" id="pepperoncinni" name="topping" value="false">
+      <label for="pepperoncinni">Pepperoncinni</label>
+
+    <input type="checkbox" id="redOnion" name="topping" value="false">
+      <label for="redOnion">Red Onion</label><br><br>
+
+      <button class="btn btn-danger" type="submit">Place Order!</button>
+    
+    </form>
+    
+    <span class="total"><h2>Total for Order: </h2></span><br>
+    <span id="output"></span>
+        
+  </div>
+  
+</body>
+</html>
