@@ -7,52 +7,41 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <div class="large-container">
-    <div class="title">
+  <div class="container">
+    <div class="jumbotron">
       <span class="main-title"><h1>Hans' Pizza Authentico</h1></span>
       <span class="subtitle"><h2>We make Pizza</h2></span>
     </div>
-    <span class="order-here"><h2>Choose your size and toppings.</h2>
-    <form id="toppings-size">
       
-      <input type="checkbox" id="xtraLarge" name="topping" value="xtraLarge">
-      <label for="xtraLarge">Xtra Large</label><br>
-
-    <input type="checkbox" id="xtraCheese" name="topping" value="xtraCheese">
-      <label for="xtraCheese">Xtra Cheese</label><br>
-
-    <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
-      <label for="pepperoni">Pepperoni</label><br>
-
-    <input type="checkbox" id="sausage" name="topping" value="sausage">
-      <label for="sausage">Sausage</label><br>
-
-    <input type="checkbox" id="anchovi" name="topping" value="anchovi">
-      <label for="anchovi">Anchovi</label><br>
-
-    <input type="checkbox" id="canadianBacon" name="topping" value="canadianBacon">
-      <label for="canadianBacon">Canadian Bacon</label><br>
-      
-      <input type="checkbox" id="pineapple" name="topping" value="pineapple">
-      <label for="pineapple">Pineapple</label><br>
-
-    <input type="checkbox" id="bellPepper" name="topping" value="bellPepper">
-      <label for="bellPepper">Bell Pepper</label><br>
-
-    <input type="checkbox" id="pepperoncinni" name="topping" value="pepperoncinni">
-      <label for="pepperoncinni">Pepperoncinni</label><br>
-
-    <input type="checkbox" id="redOnion" name="topping" value="redOnion">
-      <label for="redOnion">Red Onion</label><br><br>
-
-      <button class="btn btn-danger" type="submit">Place Order!</button>
-    
-    </form>
-    
-    <span class="total"><h2>Total for Order: </h2></span><br>
-    <span id="output"></span>
-        
+      <span class="order-here"><h2>Choose your size and toppings.</h2><br>
+        <span class="info"><p>We offer our Pizzas in two sizes, Large (18'') and Xtra Large (24''). Our pies start at $20.</p></span>
+      <form id="toppings-size">
+        <input type="checkbox" id="xtraLarge" name="topping" value="xtraLarge">
+        <label for="xtraLarge">Xtra Large + $10</label><br>
+        <input type="checkbox" id="xtraCheese" name="topping" value="xtraCheese">
+        <label for="xtraCheese">Xtra Cheese + $1</label><br>
+        <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+        <label for="pepperoni">Pepperoni + $1</label><br>
+        <input type="checkbox" id="sausage" name="topping" value="sausage">
+        <label for="sausage">Sausage + $1</label><br>
+        <input type="checkbox" id="anchovi" name="topping" value="anchovi">
+        <label for="anchovi">Anchovi +$2</label><br>
+        <input type="checkbox" id="canadianBacon" name="topping" value="canadianBacon">
+        <label for="canadianBacon">Canadian Bacon + $1</label><br>
+        <input type="checkbox" id="pineapple" name="topping" value="pineapple">
+        <label for="pineapple">Pineapple + $0.5</label><br>
+        <input type="checkbox" id="bellPepper" name="topping" value="bellPepper">
+        <label for="bellPepper">Bell Pepper + $0.5</label><br>
+        <input type="checkbox" id="pepperoncinni" name="topping" value="pepperoncinni">
+        <label for="pepperoncinni">Pepperoncinni + $0.5</label><br>
+        <input type="checkbox" id="redOnion" name="topping" value="redOnion">
+        <label for="redOnion">Red Onion + $0.5</label><br><br>
+        <button class="btn btn-danger" type="submit">Place Order!</button><br><br>
+      </form>
+      <div class="total">
+        <h2>Total for Order: </h2>
+      <span id="output" class="output"></span>
+      </div>
   </div>
-  
 </body>
 </html>

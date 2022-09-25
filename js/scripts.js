@@ -15,8 +15,8 @@ Cart.prototype.assignId = function() {
 }
 //-------------------------
 function Pizza() {
-  this.xtraCheese = false
   this.xtraLarge = false
+  this.xtraCheese = false
   this.pepperoni = false
   this.sausage = false
   this.anchovi = false
@@ -27,9 +27,9 @@ function Pizza() {
   this.redOnion = false
 }
 
-Pizza.prototype.order = function(xtraCheese, xtraLarge, pepperoni, sausage, anchovi, canadianBacon, pineapple, bellPepper, redOnion,pepperoncinni) {
-  this.xtraCheese = xtraCheese
+Pizza.prototype.order = function(xtraLarge, xtraCheese,  pepperoni, sausage, anchovi, canadianBacon, pineapple, bellPepper, redOnion,pepperoncinni) {
   this.xtraLarge = xtraLarge
+  this.xtraCheese = xtraCheese
   this.pepperoni = pepperoni
   this.sausage = sausage
   this.anchovi = anchovi
@@ -43,17 +43,17 @@ Pizza.prototype.order = function(xtraCheese, xtraLarge, pepperoni, sausage, anch
 Pizza.prototype.addUp = function () {
   total = 20
   if (this.xtraCheese === true) {
-    total += 0.5
+    total += 1
   } if (this.xtraLarge === true) {
     total += 10
   } if (this.pepperoni === true) {
-    total += 0.5
+    total += 1
   } if (this.sausage === true) {
-    total += 0.5
+    total += 1
   } if (this.anchovi === true) {
-    total += 0.5
+    total += 2
   } if (this.canadianBacon === true) {
-    total += 0.5
+    total += 1
   } if (this.pineapple === true) {
     total += 0.5
   } if (this.bellPepper === true) {
@@ -84,7 +84,6 @@ window.addEventListener("load", function() {
     let redOnion = document.getElementById("redOnion").checked
     myPizza.order(xtraLarge, xtraCheese, pepperoni, pepperoni, sausage, anchovi, canadianBacon, pineapple, bellPepper, pepperoncinni, redOnion);
     myPizza.addUp();
-    console.log(total); 
     printText = "$" + total
     document.querySelector("span#output").innerText = printText;  
   });
