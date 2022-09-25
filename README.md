@@ -26,6 +26,10 @@ This webpage presents the user with options to customize a pizza to their liking
 
 * _no known bugs at this time_
 
+## Link to GH Pages:
+
+https://mrbullhorn.github.io/pizza-parlor/
+
 
 ## License
 
